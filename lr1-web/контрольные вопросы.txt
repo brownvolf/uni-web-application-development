@@ -1,0 +1,17 @@
+6.
+
+<?php
+$name = 'Вторая страница';
+$link = 'page2.php';
+$current_page = true;
+
+$class = $current_page ? ' class="selected_menu"' : '';
+
+echo '<a href="' . $link . '"' . $class . '>' . $name . '</a>';
+?>
+
+7.
+
+задаем адрес ссылки => задаем текст =>
+проверяем активность => если активна то добавляем класс =>
+выводим ссылку
