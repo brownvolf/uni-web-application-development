@@ -1,0 +1,134 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Анализ текста</title>
+
+    <style>
+
+        /*---------------------------------голова-рыбов---------------------------------*/
+        .fish-container
+        {
+            position: fixed;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            overflow:hidden;
+            pointer-events:none;
+            z-index:1;
+        }
+
+        .fish
+        {
+            position:absolute;
+            white-space:nowrap;
+            font-size:40px;
+            opacity:0.75;
+            color:#0044cc;
+            text-shadow:0 0 10px #66aaff;
+        }
+
+        .fish-left
+        {
+            animation: swimLeft linear infinite;
+        }
+
+        .fish-right
+        {
+            animation: swimRight linear infinite;
+        }
+
+        @keyframes swimLeft
+        {
+            from
+            {
+                transform:translateX(100vw);
+            }
+
+            to
+            {
+                transform:translateX(-300px);
+            }
+        }
+
+        @keyframes swimRight
+        {
+            from
+            {
+                transform:translateX(-300px);
+            }
+
+            to
+            {
+                transform:translateX(100vw);
+            }
+        }
+
+        /* =========================
+        MAIN CONTENT OVER FISHES
+        ========================= */
+
+        body
+        {
+            position: relative;
+            z-index: 2;
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- FISHES -->
+
+<div class="fish-container">
+
+    <div class="fish fish-left"
+         style="top:5%; animation-duration:18s;">
+         <^[[[><
+    </div>
+
+    <div class="fish fish-right"
+         style="top:20%; animation-duration:25s;">
+         ><]]]^>
+    </div>
+
+    <div class="fish fish-left"
+         style="top:35%; animation-duration:14s;">
+         <^[[[><
+    </div>
+
+    <div class="fish fish-right"
+         style="top:50%; animation-duration:22s;">
+         ><]]]^>
+    </div>
+
+    <div class="fish fish-left"
+         style="top:70%; animation-duration:30s;">
+         <^[[[><
+    </div>
+
+    <div class="fish fish-right"
+         style="top:85%; animation-duration:16s;">
+         ><]]]^>
+    </div>
+
+</div>
+
+<!-- ---------------------------------хвост-рыбов--------------------------------- -->
+
+    <h2>Введите текст для анализа</h2>
+
+    <form action="result.php" method="post">
+        <textarea name="text" rows="10" cols="80"></textarea>
+        <br><br>
+
+        <button type="submit">
+            Анализировать
+        </button>
+    </form>
+
+</body>
+</html>
